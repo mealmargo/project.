@@ -1,5 +1,106 @@
+body {
+    background-color: #d3d3d3;
+    margin: 50px ;
+    font-family: 'Work Sans', sans-serif;
+    
+}
+@media screen and (min-width: 768px) {
 
-@media screen and (max-width: 600px) {
+    .empty {
+        margin-top: 220px;
+    }
+    .readmore {
+        margin-bottom: 0;
+    }
+    .flex-direction {
+        flex-direction: column;
+    }
+    .imgleft {
+        height: 450px;
+        margin: 40px;
+
+    }
+    .photon {
+        width: 210px;
+        height: 210px;
+       }
+    .upbutton {
+        margin: 0 0 0 0;
+    }
+    .cnt {
+        margin: 0 10px;
+    }
+    .cntr {
+        margin: 0 10px 0 0;
+
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .btn {
+        flex-direction: column;
+        text-align: center;
+    }
+    button {
+        padding: 10px 0;
+    }
+    main {
+        flex-direction: column;
+
+        text-align: center;
+    }
+    .empty {
+        padding: 50px;
+    }
+
+    .flex-direction
+    {
+        flex-direction: row;
+        flex: 1;
+
+    }
+    .info {
+        flex-wrap: wrap;
+    }
+
+    .card3 {
+        flex-direction: column;
+    }
+    .imgleft {
+
+        display: none;
+    }
+    .textright {
+        text-align: center;
+        margin: 0 20px;
+    }
+    aside{
+        display: flex ;
+        flex-wrap: no-wrap;
+        align-items: center;
+        justify-content: center;
+        
+    }    
+    .photon {
+        width: 28vh;
+        height: 28vh;
+    }
+    .one {
+        margin-right: 20px;
+    }
+    .upbutton, .card2 {
+        margin-bottom: 10px;
+    }
+    .upbutton {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
     .btn {
         flex-direction: column;
         text-align: center;
@@ -12,19 +113,56 @@
         flex-direction: column;
 
         text-align: center;
-    }
-    main {
+    }  
+        .flex-direction{
         flex-direction: column;
 
         text-align: center;
     }
+    .h1, .h3a, .readmore{   
+   
+       
+        margin-left: 0px;
+    }
+  
+  .img {
+    text-align: left;
+   
+} 
+   .photon {
+    width: 210px;
+    height: 210px;
+   }
+ 
+  .imgleft {
+    display: none;
+
 }
-body {
-    background-color: #d3d3d3;
-    margin: 50px;
-    font-family: 'Work Sans', sans-serif;
+  .textright {
+    text-align: center;
+    margin: 0px 20px;
+
+    }
+  aside{
+    display: flex ;
+    flex-wrap: no-wrap;
+    align-items: center;
+    justify-content: center;
     
+    
+  }
+  .one {
+    margin-right: 0;
+  }
+  .upbutton, .card2 {
+    margin-bottom: 20px;
 }
+.upbutton {
+    margin-left: 0;
+    margin-right: 0;
+}
+}
+
 button {
     color: #545454;
     background-color: #ddd;
@@ -35,8 +173,20 @@ button {
     flex: 1;
     border: none;
     box-shadow: 0 0 5px 3px #bdbebd; 
+   
     
 }
+.upbutton {
+    animation: buttonup 2s ease-in-out;
+}
+
+.rgt {
+ animation: rgt 2s ease-in-out;
+}
+.lft {
+animation: lft 2s ease-in-out;
+}
+   
 .btn{
     display: flex;
     margin-bottom: 25px;
@@ -58,6 +208,7 @@ button:hover {
     font-size: medium;
     box-shadow: none;
     margin-left: 40px;
+  margin-bottom: 40px;
 }
 .img {
     background-image: url(https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg);
@@ -70,7 +221,7 @@ button:hover {
 .h1 {
     color: white;
     font-size: 3em;
-    margin-top: 220px;
+    margin-top: 40px;
     margin-left: 40px;
     margin-bottom: 0;
 }
@@ -93,7 +244,6 @@ main {
     display: flex;
 }
 .flex-direction {
-    flex-direction: column;
     flex: 1;
     display: flex;
 }
@@ -121,7 +271,6 @@ main {
 .card2 {
     color: #2c2c2c;
     background-color: #ddd;
-    margin: 10px;
     box-shadow: 0 0 5px 3px #bdbebd;
     text-align: center;
    
@@ -173,9 +322,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 450px;
-    margin: 40px;
-
+    
 
 }
 .textright {
@@ -194,8 +341,6 @@ footer{
     text-align: center;
 }
 .photon {
-    width: 210px;
-    height: 210px;
     background-size: cover;
     background-position: center;
     margin: 10px;
@@ -218,12 +363,7 @@ aside {
     font-size: large;
 }
 
-.last {
-    margin-right:0;
-}
-.first {
-    margin-left: 0;
-}
+
 i {
     margin-top: 20px;
 }
@@ -235,3 +375,34 @@ i {
 .card2 h4{
     margin: 20px 0 20px 0;
 }
+
+
+
+
+
+@keyframes buttonup {
+    0% {
+        transform: translateY(-300%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes rgt{
+    0% {
+        transform: translateX(150%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes lft{
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
